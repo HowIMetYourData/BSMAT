@@ -1,0 +1,12 @@
+[Unit]
+Description=BSM Test Directory Monitor Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/vboxuser/bsm/monitor.py
+Restart=always
+User=vboxuser
+WorkingDirectory=/home/vboxuser/
+
+[Install]
+WantedBy=multi-user.target
